@@ -27,8 +27,8 @@ Analysis done in Jupyter notebook: [IMDA_analysis.ipynb](https://github.com/leez
 
 Summary: 
 (i) Each captcha is very similar to each other with only differing alphabets/numbers. We extract the alphabets and numbers using masking method since Captcha images are in a fixed format (e.g. distance between each alphabet/numbers are always the same; font sizes are always the same). Hence, masking method can accurately extract the individual alphabet/numbers from the Captcha image. 
-(ii) For classification, we can apply image generation by sampling each pixel for the alphabets/numbers individually, before using feature extraction (from the VGG16 model) as input for the XGBoost classifier. The classifer will in turn predict alphabet/number that is the closest match in its dictionary. 
-(iii) For XOR method (which is , we binarize the pixels to 0 or 1 by thresholding values above 100 and below 100 respectively. Then we perform XOR elementwise against all the alphabets and numbers (Vectors are obtained through all input examples A-Z0-9) and calculating the error and taking 1 minus that error. Exact matches outputs a value of 1. We then obtain the respective label corresponding to the index with that value of 1.
+(ii) For classification, we can apply image generation by sampling each pixel for the alphabets/numbers individually, before using feature extraction (from the VGG16 model) as input for the XGBoost classifier. The classifer will in turn predict alphabet/number that is the closest match in the full dictionary of all alphabets and numbers. 
+(iii) For XOR method (which is a logical "exclusive OR" function in python), we can binarize the pixels to 0 or 1 by thresholding values above 100 and below 100 respectively. After which, we can perform XOR elementwise against the full dictionary of all the alphabets and numbers (where vectors are obtained through all input examples A-Z0-9). Lastly, with the output ranging from 0 to 1 (with 0 being the exact match, and 1 being a completely wrong match), we derive the similarity distances between the input data and all alphabets and numbers. 
 
 Methods:
 1. VGG16 feature extraction + XGBoost classification + Image generation
@@ -39,8 +39,10 @@ Brief Steps:
 2. Extract alphabets/numbers using masks
 3. Apply methods above
 
-## Method of choice (For this case): XOR Method
-Reason: Simple, efficient, computes faster, and more reliable as structure and font would not change.
+## Evaluation of the best method: XOR Method. 
+1. Computationally more efficient than the classification method.
+2. Results are easier to interpret and explain for, as the output provides all the distances between each input element against the full dictionary of alphabets and numbers. In other words, based on the results, we are able to identify problematic input elements that are causing wrong predictions. Conversely, the classification method is a blackbox, and it is difficult to identify what went wrong based on the output. 
+
 
 Please run example as follows:
 
