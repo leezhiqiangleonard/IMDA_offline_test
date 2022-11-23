@@ -23,7 +23,18 @@ You are provided a set of twenty-five captchas, such that, each of the character
 
 ## Analysis
 
-[Analysis done in Jpyter notebook:](https://github.com/leezhiqiangleonard/IMDA_offline_test/blob/main/IMDA_analysis.ipynb)
+Analysis done in Jupyter notebook: [IMDA_analysis.ipynb](https://github.com/leezhiqiangleonard/IMDA_offline_test/blob/main/IMDA_analysis.ipynb)
+
+Summary: Each
+
+Methods:
+1. VGG16 feature extraction + XGBoost classification
+2. XOR function similarity
+
+Brief Steps:
+1. Grayscale image
+2. Extract alphabets/numbers using masks
+3. Apply methods above
 
 ## How to run
 
