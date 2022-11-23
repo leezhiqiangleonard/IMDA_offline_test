@@ -23,6 +23,8 @@ You are provided a set of twenty-five captchas, such that, each of the character
 
 ## Analysis
 
+[Analysis done in Jpyter notebook:](https://github.com/leezhiqiangleonard/IMDA_offline_test/blob/main/IMDA_analysis.ipynb)
+
 ## How to run
 
 ```bash
