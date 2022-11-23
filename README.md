@@ -23,7 +23,7 @@ You are provided a set of twenty-five captchas, such that, each of the character
 
 ## Analysis
 
-Analysis done in Jupyter notebook: [IMDA_analysis.ipynb](https://github.com/leezhiqiangleonard/IMDA_offline_test/blob/main/IMDA_analysis.ipynb)
+Full Analysis done in Jupyter notebook: [IMDA_analysis.ipynb](https://github.com/leezhiqiangleonard/IMDA_offline_test/blob/main/IMDA_analysis.ipynb)
 
 Thought Process (Summarized):
 1. Each captcha is very similar to each other with only differing alphabets/numbers. We extract the alphabets and numbers using masking method since Captcha images are in a fixed format (e.g. distance between each alphabet/numbers are always the same; font sizes are always the same). Hence, masking method can accurately extract the individual alphabet/numbers from the Captcha image. 
