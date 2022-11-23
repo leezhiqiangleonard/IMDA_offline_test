@@ -43,8 +43,6 @@ Reason: Simple, efficient, computes faster, and more reliable as structure and f
 
 ```bash
 python3 captcha_XOR.py --img-path <insert image path> --output-path <insert output path (.txt file)>
-```
 
-``bash
 python3 captcha_XGB.py --img-path <insert image path> --output-path <insert output path (.txt file)>
 ```
