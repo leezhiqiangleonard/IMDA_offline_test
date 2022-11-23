@@ -1,5 +1,5 @@
 # IMDA_offline_test
-This challenge in done in conjunction with IMDA's offline test for the role of Data Scientist
+*This challenge in done in conjunction with IMDA's offline test for the role of Data Scientist*
 
 ## Introduction
 (A) Task 
@@ -19,3 +19,7 @@ You are provided a set of twenty-five captchas, such that, each of the character
 ## Analysis
 
 ## How to run
+
+```bash
+python3 captcha_XOR.py --img-path <insert file path> --output-path <insert output path (.txt file)>
+```
