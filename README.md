@@ -1,5 +1,5 @@
 # IMDA_offline_test
-*This challenge in done in conjunction with IMDA's offline test for the role of Data Scientist*
+*This challenge in done in conjunction with IMDA's offline test for the interview role of Data Scientist*
 
 ## Introduction
 (A) Task 
