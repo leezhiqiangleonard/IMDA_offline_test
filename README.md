@@ -39,7 +39,13 @@ Brief Steps:
 ## Method of choice (For this case): XOR Method
 Reason: Simple, efficient, computes faster, and more reliable as structure and font would not change.
 
-## How to run
+Please run example as follows:
+
+```bash
+python3 captcha_XOR.py --img-path <insert image path> --output-path <insert output path (.txt file)>
+```
+
+## How to run (all methods)
 
 ```bash
 python3 captcha_XOR.py --img-path <insert image path> --output-path <insert output path (.txt file)>
