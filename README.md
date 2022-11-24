@@ -35,8 +35,8 @@ Methods used:
 2. XOR function similarity
 
 Brief Steps:
-1. Grayscale image
-2. Extract alphabets/numbers using masks
+1. Grayscale image the images to reduce the number of color channels (3 channels RGB) to 1 channel (Monotone) for easier identification of alphabet/number features
+2. Extract alphabets/numbers by applying a boolean mask (A matrix consisting of True/False values) that identifies where the alphabets/numbers are in the captcha image with True values indicating the position to extract.
 3. Apply methods above
 
 ## Evaluation of the best method: XOR Method. 
