@@ -6,16 +6,21 @@ import numpy as np
 from PIL import Image, ImageOps
 
 #Models
+from sklearn.preprocessing import LabelEncoder
 import xgboost as xgb
 from keras.applications.vgg16 import VGG16
 
 class Captcha(object):
     def __init__(self):
         # Load preprocessors
-        preprocessing_d = pickle.load(open('preprocessing_d.pkl', 'rb'))
+        preprocessing_d = pickle.load(open('weights_and_labels.pkl', 'rb'))
         self.masks = preprocessing_d['masks']
-        self.le = preprocessing_d['label_encoder']
-        self.VGG_model = preprocessing_d['VGG16']
+        self.le = LabelEncoder()
+        self.le.classes_ = np.load('classes.npy', allow_pickle=True)
+        self.VGG_model = VGG_model = VGG16(weights='imagenet', include_top=False, input_shape=(40, 32, 3))
+        
+        for layer in VGG_model.layers:
+            layer.trainable = False
         
         # Load Model
         self.model = xgb.XGBClassifier()
