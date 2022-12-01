@@ -2,8 +2,9 @@
 *This challenge is done in conjunction with IMDA's offline test for the interview role of Data Scientist*
 
 ## How to install relevant python libraries
+Requirements: Python==3.7
 ``` bash
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Introduction
