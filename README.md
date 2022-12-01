@@ -1,6 +1,12 @@
 # IMDA_offline_test
 *This challenge is done in conjunction with IMDA's offline test for the interview role of Data Scientist*
 
+## How to install relevant python libraries
+Requirements: Python==3.7
+``` bash
+pip install -r requirements.txt
+```
+
 ## Introduction
 (A) Task 
 Note: No advanced computer vision background is required to solve this challenge. A simple understanding of the 256 x 256 x 256 RGB color space is sufficient.
